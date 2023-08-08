@@ -1,0 +1,20 @@
+
+
+td{
+    margin-bottom: 16px;
+    padding: 8px;
+    width: 20%;
+    border-bottom: 1px solid white;
+
+    
+}
+
+.tabela{
+    width: 100%;
+    text-align: center;
+}
+
+tr{
+    display: flex;
+    justify-content: space-around;
+}

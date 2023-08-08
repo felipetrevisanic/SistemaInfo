@@ -1,0 +1,11 @@
+<header class="cabecalho"  [ngClass]="{'login':isLoginRoute()}">
+    <h1>Sistema info</h1>
+    <button *ngIf="!isLoginRoute()" class="bars" (click)="toggleSidebar()"><fa-icon [icon]="faBars"></fa-icon></button>
+    <div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+        <button class="bars barsIn" (click)="toggleSidebar()"><fa-icon [icon]="faX"></fa-icon></button>
+        <ul>
+            <li><a class="link" routerLink="/cadastroUsuario">Cadastro</a></li>
+            <li><a class="link" routerLink="/listaUsuario">Lista</a></li>
+        </ul>
+    </div>
+</header>

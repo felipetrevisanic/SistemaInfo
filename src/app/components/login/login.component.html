@@ -1,0 +1,40 @@
+
+<form>
+    <div class="formulario">
+        <div>
+            <label for="login">Login:</label>
+            <input
+                type="text"
+                name="nome"
+                class="input"
+                placeholder="Digite seu login aqui..."
+                required
+                [(ngModel)]="usuario.login"
+            >
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input
+                type="password"
+                name="senha"
+                class="input"
+                placeholder="Digite seu senha aqui..."
+                required
+                [(ngModel)]="usuario.senha"
+            >
+        </div>
+    </div>
+    <div class="botao__div">
+        <button type="button" (click)="validarLogin()" class="botao">Entrar</button>
+        <button type="button" (click)="abrirAviso()" class="botao">Não possui cadastro?</button>
+    </div>
+</form>
+<div *ngIf="opcao, else aviso">
+
+</div>
+
+<ng-template #aviso>
+    <div class="aviso">
+        Caso ainda não possua um cadastro, entre em contato com o seu chefe de setor solicitando um novo usuario para você. Assim que for realizado o seu cadastro no sistema será repassado o os seus dados diretamente para o seus chefe de setor
+    </div>
+</ng-template>

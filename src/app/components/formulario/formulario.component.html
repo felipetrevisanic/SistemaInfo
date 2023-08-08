@@ -1,0 +1,85 @@
+<form >
+    <section class="formulario">
+        <div>
+            <label for="nome">Nome:</label>
+            <input
+                type="text"
+                name="nome"
+                class="input"
+                placeholder="Digite seu nome aqui..."
+                required
+                [(ngModel)]="cadastro.nome"
+            >
+        </div>
+        <div>
+            <label for="cpf">CPF:</label>
+            <input
+                type="text"
+                name="cpf"
+                class="input"
+                mask="000.000.000-00"
+                placeholder="Digite seu CPF aqui..."
+                required
+                [(ngModel)]="cadastro.cpf"
+            >
+        </div>
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input
+            type="text"
+            name="telefone"
+            class="input"
+            mask="(00) 00000-0000"
+            placeholder="Digite seu telefone aqui..."
+            [(ngModel)]="cadastro.telefone"
+            >
+        </div>
+    </section>
+
+    <section class="formulario">
+        <div>
+            <label for="rua">Rua:</label>
+            <input
+            type="text"
+            name="rua"
+            class="input"
+            placeholder="Digite seu rua aqui..."
+            [(ngModel)]="cadastro.rua"
+            >
+        </div>
+        <div>
+            <label for="numero">Numero:</label>
+            <input
+            type="text"
+            name="numero"
+            class="input"
+            placeholder="Digite seu numero aqui..."
+            [(ngModel)]="cadastro.numero"
+            >
+        </div>
+        <div>
+            <label for="bairro">Bairro:</label>
+            <input
+            type="text"
+            name="bairro"
+            class="input"
+            placeholder="Digite seu bairro aqui..."
+            [(ngModel)]="cadastro.bairro"
+            >
+        </div>
+        <div>
+            <label for="cidade">Cidade:</label>
+            <input
+            type="text"
+            name="cidade"
+            class="input"
+            placeholder="Digite seu cidade aqui..."
+            [(ngModel)]="cadastro.cidade"
+            >
+        </div>
+    </section>
+</form>
+<div class="botao__div">
+    <button class="botao" (click)="AdicionarCadastro()">Adicionar</button>
+    <button class="botao" (click)="Cancelar()">Cancelar</button>
+</div>

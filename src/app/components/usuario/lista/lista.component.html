@@ -1,0 +1,24 @@
+<section >
+    <div class="tabela" *ngIf="listaUsuarios.length > 0, else semUsuario">
+        <table class="tabela">
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Rua</th>
+                <th>Numero</th>
+                <th>bairro</th>
+                <th>Cidade</th>
+                <th>Código</th>
+            </tr>
+        </table>
+        <div class="tabela" *ngFor="let usuario of listaUsuarios">
+            <app-usuario [usuario]=usuario></app-usuario>
+        </div>
+    </div>
+</section>
+<ng-template #semUsuario>
+    <div class="carregando">
+        <fa-icon [icon]="faHourglass"></fa-icon>
+    </div>
+</ng-template>

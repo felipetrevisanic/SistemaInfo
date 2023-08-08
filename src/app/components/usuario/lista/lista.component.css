@@ -1,0 +1,21 @@
+th{
+    margin-bottom: 16px;
+    padding: 8px;
+    border-bottom: 1px solid white;
+    width: 15%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.tabela{
+    width: 100%;
+}
+
+tr{
+    display: flex;
+    justify-content: space-around;
+}
+
+.carregando{
+    text-align: center;
+}
+
